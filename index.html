@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color:rgb(186, 197, 211);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div>
+      <h3>Overview and Excerpt</h3>
+      <p>
+        A biological researcher has found that certain bacterial species found in the belly buttons 
+        of humans can potentially be used to create food that tastes like beef. There are various types of bacterial species that live on the human body
+        and these species also vary from person to person. The biologist has collected information from people all over the United States 
+        on the type of bacterial species that live in their navel.
+      </p>
+      <p>
+        Please make use of the dropdown menu to explore the dataset collected.
+      </p>
+      <p>
+        ______________________________________________________________________________________________________________________________________________
+      </p>
+    </div>
+    <!-- -->
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body" style="font-size: 18px;"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div>
+          <h4>OTU Bar Chart</h4>
+          <p>This bar chart provides a visual on the top ten OTU IDs on a person and the total value of that bacteria.</p>
+        </div>
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div>
+          <h4>OTU Gauge</h4>
+          <p>This gauge provides information on how many times a week the person washes their belly button.</p>
+        </div>
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div>
+          <h4>OTU Bubble Chart</h4>
+          <p>This bubble chart provides a better view on the intensity of the top ten OTU IDs on the person.</p>
+        </div>
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="BellyButton_bar_chart.js"></script>
+
+</body>
+
+</html>
